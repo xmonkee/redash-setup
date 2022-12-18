@@ -22,9 +22,7 @@ install_docker(){
     sudo usermod -aG docker $USER
     
     # Run the daemon
-    sudo systemctl start docker
-    sudo systemctl enable docker
-    sudo systemctl status docker
+    sudo dockerd -d
 }
 
 create_directories() {
