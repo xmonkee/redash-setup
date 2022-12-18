@@ -20,6 +20,11 @@ install_docker(){
 
     # Allow current user to run Docker commands
     sudo usermod -aG docker $USER
+    
+    # Run the daemon
+    sudo systemctl start docker
+    sudo systemctl enable docker
+    sudo systemctl status docker
 }
 
 create_directories() {
