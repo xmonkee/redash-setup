@@ -22,7 +22,7 @@ install_docker(){
     sudo usermod -aG docker $USER
     
     # Run the daemon
-    sudo dockerd -d
+    sudo dockerd
 }
 
 create_directories() {
